@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <style>
+      /* Style yang sudah ada dari project.html sebelumnya */
+      #carousel-right img {
+        width: 50%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px; 
+      }
+      
+      #article-1 {
+        background-color: aqua;
+      }
+      #article-1-image {
+        background-color: blueviolet;
+      }
+      #article-2 {
+        background-color: rgb(255, 0, 221);
+      }
+      #article-2-image {
+        background-color: rgb(226, 43, 119);
+      }
+
+      #contents {
+        padding: 2em;
+      }
+
+      #contents-1 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-1-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-1-content {
+        padding: 0.5em;
+      }
+
+      #contents-1-content-title {
+        font-size: 1.2em;
+      }
+
+      #contents-2 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-2-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-2-content {
+        padding: 0.5em;
+      }
+
+      #contents-2-content-title {
+        font-size: 1.2em;
+      }
+
+      #contents-3 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-3-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-3-content {
+        padding: 0.5em;
+      }
+
+      #contents-3-content-title {
+        font-size: 1.2em;
+      }
+
+      #contents-4 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-4-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-4-content {
+        padding: 0.5em;
+      }
+
+      #contents-4-content-title {
+        font-size: 1.2em;
+      }
+
+      #contents-5 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-5-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-5-content {
+        padding: 0.5em;
+      }
+
+      #contents-5-content-title {
+        font-size: 1.2em;
+      }
+
+      #contents-6 {
+        margin: 1em 0;
+        padding: 1em;
+      }
+
+      #contents-6-number {
+        color: gray;
+        opacity: 0.25;
+      }
+
+      #contents-6-content {
+        padding: 0.5em;
+      }
+
+      #contents-6-content-title {
+        font-size: 1.2em;
+      }
+
+      #article {
+        background-color: #f7f9fa;
+        padding: 1em 2em;
+      }
+
+      #article .col-md-4 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        }
+        
+      #discover-and-footer {
+        padding: 1em 2em;
+      }
+      
+      /* Style untuk badges */
+      #discover-and-footer-topic-badge {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .badge {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5em 1em;
+        font-weight: normal;
+        border-radius: 12px;
+      }
+
+
+      #discover-and-footer-title-subscribtion {
+        margin-top: 1.5em;
+      }
+
+      /* layout mobile */
+      @media screen and (max-width: 1400px) {
+        #carousel-right {
+          display: none;
+        }
+        #carousel {
+          display: 2em 1em;
+        }
+        #carousel-left-caption {
+          padding: 0 1em;
+        }
+        #carousel-left-button {
+          margin: 1em 0;
+        }
+      }
+
+      /* layout website */
+      @media screen and (min-width: 1400px) {
+        #carousel-left-button {
+          margin: 1em 0;
+          width: 20%;
+        }
+        #carousel {
+          margin: 2em 0;
+        }
+        #wave {
+          margin-top: -180px;
+        }
+
+        #contents-1 {
+          padding: 1em;
+        }
+        #contents-2 {
+          padding: 1em;
+        }
+        #contents-3 {
+          padding: 1em;
+        }
+        #contents-4 {
+          padding: 1em;
+        }
+        #contents-5 {
+          padding: 1em;
+        }
+        #contents-6 {
+          padding: 1em;
+        }
+      }
+    </style>
+
+    <title>Word World</title>
+  </head>
+  <body>
+    <section id="navbar" style="background-color: #ffde5c">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffde5c">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="gambar/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+            Word World
+          </a>
+          <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+            <li class="nav-item">
+              <button class="btn btn-secondary" type="submit" style="border-radius: 24px">Mulai Jelajahi</button>
+                </li>
+                  </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr style="margin: 0px 0px; height: 3px; opacity: 0.5" />
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+  <div class="carousel-item active">
+    <div class="container">
+      <div id="carousel" class="row">
+        <div id="carousel-left" class="col">
+          <div class="row">
+            <div class="col">
+              <h1 class="display-3">
+                <strong>Permata Tersembunyi</strong>
+              </h1>
+            </div>
+          </div>
+          <div id="carousel-left-caption" class="row">
+            <p>
+              Kyoto bukan hanya kuil-kuil bersejarah. Temukan kafe-kafe minimalis di Gion, jalur hiking tersembunyi
+              yang menyajikan pemandangan kota, serta pasar lokal dengan street food otentik.
+            </p>
+          </div>
+          <div id="carousel-left-button" class="row">
+            <button class="btn btn-warning">Get Started</button>
+          </div>
+        </div>
+        <div id="carousel-right" class="col">
+          <img src="gambar/kyoto.jpg" class="img-fluid" alt="Gion Kyoto" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="container">
+      <div id="carousel" class="row">
+        <div id="carousel-left" class="col">
+          <div class="row">
+            <div class="col">
+              <h1 class="display-3">
+                <strong>Wisata Kuliner Jepang</strong>
+              </h1>
+            </div>
+          </div>
+          <div id="carousel-left-caption" class="row">
+            <p>
+              Kenali jajanan khas Jepang seperti taiyaki, okonomiyaki, dan wagyu murah yang hanya dikenal warga lokal.
+            </p>
+          </div>
+          <div id="carousel-left-button" class="row">
+            <button class="btn btn-warning">Learn More</button>
+          </div>
+        </div>
+        <div id="carousel-right" class="col">
+          <img src="gambar/susi.jpg" class="img-fluid" alt="Makanan Jepang">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="container">
+      <div id="carousel" class="row">
+        <div id="carousel-left" class="col">
+          <div class="row">
+            <div class="col">
+              <h1 class="display-3">
+                <strong>Eksplor Asia Tenggara</strong>
+              </h1>
+            </div>
+          </div>
+          <div id="carousel-left-caption" class="row">
+            <p>
+              Jelajahi hidden gem di Thailand, Malaysia, dan Vietnam dengan biaya terjangkau dan aman untuk solo traveler.
+            </p>
+          </div>
+          <div id="carousel-left-button" class="row">
+            <button class="btn btn-warning">Explore</button>
+          </div>
+        </div>
+        <div id="carousel-right" class="col">
+          <img src="gambar/travel.jpg" class="img-fluid" alt="Asia Tenggara">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffff"
+          fill-opacity="1"
+          d="M0,192L60,170.7C120,149,240,107,360,101.3C480,96,600,128,720,144C840,160,960,160,1080,138.7C1200,117,1320,75,1380,53.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <section id="trending">
+      <div class="container">
+        <div id="title" class="row">
+          <h3><img src="gambar/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top" /> Trending On Word World</h3>
+        </div>
+        <div id="contents" class="row">
+          <div id="contents-1" class="col-md-4">
+            <div class="row">
+              <div id="contents-1-number" class="col-2">
+                <h2><strong>01</strong></h2>
+              </div>
+              <div id="contents-1-content" class="col">
+                <div id="contents-1-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-1-content-title" class="row">
+                  <p><strong>7 Kebiasaan Pagi yang Mengubah Hidup Anda</strong></p>
+                </div>
+                <div id="contents-1-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 15 | 8 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-2" class="col-md-4">
+            <div class="row">
+              <div id="contents-2-number" class="col-2">
+                <h2><strong>02</strong></h2>
+              </div>
+              <div id="contents-2-content" class="col">
+                <div id="contents-2-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-2-content-title" class="row">
+                  <p><strong>Mengapa Intermittent Fasting Begitu Populer?</strong></p>
+                </div>
+                <div id="contents-2-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 15 | 12 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-3" class="col-md-4">
+            <div class="row">
+              <div id="contents-3-number" class="col-2">
+                <h2><strong>03</strong></h2>
+              </div>
+              <div id="contents-3-content" class="col">
+                <div id="contents-3-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-3-content-title" class="row">
+                  <p><strong>Resep Sate Lilit Ayam Khas Bali (Anti Gagal)</strong></p>
+                </div>
+                <div id="contents-3-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 14 | 10 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-4" class="col-md-4">
+            <div class="row">
+              <div id="contents-4-number" class="col-2">
+                <h2><strong>04</strong></h2>
+              </div>
+              <div id="contents-4-content" class="col">
+                <div id="contents-4-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-4-content-title" class="row">
+                  <p><strong>Panduan Lengkap Solo Traveling ke Raja Ampat</strong></p>
+                </div>
+                <div id="contents-4-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 13 | 15 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-5" class="col-md-4">
+            <div class="row">
+              <div id="contents-5-number" class="col-2">
+                <h2><strong>05</strong></h2>
+              </div>
+              <div id="contents-5-content" class="col">
+                <div id="contents-5-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-5-content-title" class="row">
+                  <p><strong>Daftar Hidden Gem Kafe di Jakarta Selatan</strong></p>
+                </div>
+                <div id="contents-5-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 13 | 7 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contents-6" class="col-md-4">
+            <div class="row">
+              <div id="contents-6-number" class="col-2">
+                <h2><strong>06</strong></h2>
+              </div>
+              <div id="contents-6-content" class="col">
+                <div id="contents-6-content-author" class="row">
+                  <strong>
+                    <p style="margin-bottom: 0">
+                      <img src="gambar/logo.jpg" alt="" width="20" height="20" class="d-inline-block align-text-top" />
+                      Word World
+                    </p>
+                  </strong>
+                </div>
+                <div id="contents-6-content-title" class="row">
+                  <p><strong>5 Outfit Kasual untuk Liburan ke Pantai</strong></p>
+                </div>
+                <div id="contents-6-content-time-and-date" class="row">
+                  <p style="margin-bottom: 0">Juni 12 | 6 min baca <i class="bi bi-star-fill"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="margin: 0px 0px; height: 3px; opacity: 0.5" />
+
+    <section id="multi-section">
+      <div class="container">
+        <div class="row">
+          <div id="article" class="col-md-8">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><img src="gambar/logo.jpg" alt="" width="25" height="25" class="d-inline-block align-text-top" style="margin-right: 0.5em" />Word World</h5>
+                    <p class="card-text" style="margin-bottom: 0">
+                      <strong>A Review: Kamera Mirrorless Terbaik untuk Vlogger</strong>
+                    </p>
+                    <p class="card-text">Kami mengulas tiga kamera mirrorless paling populer tahun ini, menimbang kelebihan dan kekurangan untuk kebutuhan pembuatan konten video perjalanan dan kuliner.</p>
+                    <div class="card-text row">
+                      <div class="col-md-8">
+                        <small class="text-muted">Juni 16 | 10 min baca</small>
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <i class="bi bi-bookmark"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <img src="gambar/kamera.jpg" class="img-fluid rounded-start" alt="Foto close-up kamera mirrorless terbaik untuk vlogging atau traveling." />
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><img src="gambar/logo.jpg" alt="" width="25" height="25" class="d-inline-block align-text-top" style="margin-right: 0.5em" />Word World</h5>
+                    <p class="card-text" style="margin-bottom: 0">
+                      <strong>Mencicipi Nasi Goreng Legendaris di Lima Kota</strong>
+                    </p>
+                    <p class="card-text">Dari Nasi Goreng Kambing Kebon Sirih hingga yang paling pedas di Surabaya, kami rangkum lima destinasi wajib bagi pecinta nasi goreng di Indonesia.</p>
+                    <div class="card-text row">
+                      <div class="col-md-8">
+                        <small class="text-muted">Juni 14 | 8 min baca</small>
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <i class="bi bi-bookmark"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <img src="gambar/nasgor.jpg" class="img-fluid rounded-start" alt="Foto close-up nasi goreng legendaris dengan asap yang masih mengepul." />
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><img src="gambar/logo.jpg" alt="" width="25" height="25" class="d-inline-block align-text-top" style="margin-right: 0.5em" />Word World</h5>
+                    <p class="card-text" style="margin-bottom: 0">
+                      <strong>4 Tips Merawat Tanaman Hias Indoor Agar Tetap Segar</strong>
+                    </p>
+                    <p class="card-text">Pelajari cara memilih pot yang tepat, mengatur intensitas cahaya, dan jadwal penyiraman yang ideal untuk Monstera, Lidah Mertua, dan tanaman indoor lainnya.</p>
+                    <div class="card-text row">
+                      <div class="col-md-8">
+                        <small class="text-muted">Juni 12 | 5 min baca</small>
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <i class="bi bi-bookmark"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <img src="gambar/hias.jpg" class="img-fluid rounded-start" alt="Foto tanaman hias Monstera atau Pilea di pot estetik dengan cahaya alami." />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="discover-and-footer" class="col-md-4">
+            <div id="discover-and-footer-title" class="row">
+            </div>
+            <hr />
+            <div id="discover-and-footer-title-subscribtion" class="row">
+              <h5>Dapatkan Inspirasi Mingguan Langsung ke Kotak Masuk Anda</h5>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Masukkan Email Anda" aria-label="Masukkan Email Anda" aria-describedby="button-addon2" />
+                  <button class="btn btn-warning" type="button" id="button-addon2">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+    <div class="container my-5">
+      <footer class="text-center text-lg-start bg-light text-muted">
+        <section class="p-4 border-bottom">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="bi bi-geo-alt-fill me-3"></i>Infinity
+                </h6>
+                <p>
+                  Kami adalah media yang didedikasikan untuk menjelajahi keindahan dunia, dari destinasi tersembunyi hingga cita rasa otentik yang dapat Anda buat di rumah.
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Produk</h6>
+                <p><a href="#!" class="text-reset">Travel Guide</a></p>
+                <p><a href="#!" class="text-reset">E-Book Resep</a></p>
+                <p><a href="#!" class="text-reset">Gear Review</a></p>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Tautan Berguna</h6>
+                <p><a href="#!" class="text-reset">Harga</a></p>
+                <p><a href="#!" class="text-reset">Pengaturan</a></p>
+                <p><a href="#!" class="text-reset">Bantuan</a></p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Kontak</h6>
+                <p><i class="bi bi-house-fill me-3"></i> BatuBara, Indonesia</p>
+                <p><i class="bi bi-envelope-fill me-3"></i> info@infinity.com</p>
+                <p><i class="bi bi-phone-fill me-3"></i> +62 823 6710 7445</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+          © 2025 Hak Cipta:
+          <a class="text-reset fw-bold" href="#">InfinityTravelTaste.com</a>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
